@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'archivo';
+    src: url('/Archivo-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'marcellus';
+    src: url('/Marcellus-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

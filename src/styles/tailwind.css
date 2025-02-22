@@ -1,0 +1,120 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer base {
+
+  :root {
+
+    --black_900: #000000;
+    --black_900_3f: #0000003f;
+    --black_900_44: #00000044;
+    --blue_gray_100: #d9d9d9;
+    --blue_gray_900: #0c2d48;
+    --blue_gray_900_01: #242c44;
+    --dark_gray_0: #34242;
+    --dark_gray_1: #3f4242cc;
+    --gray_400: #bdbfc8;
+    --gray_800: #3d3c3c;
+    --gray_900: #1b1e21;
+    --indigo_a200: #527af4;
+    --lime_800: #b9892e;
+    --orange_300: #d6ad60;
+    --white_a700: #ffffff;
+    --white_a700_19: #ffffff19;
+    --white_a700_33: #ffffff33;
+    --white_a700_4c: #ffffffdc;
+    --white_a700_7f: #ffffff7f;
+    --white_a700_99: #ffffff99;
+    --white_a700_b2: #ffffffb2;
+
+    --shadow-xs: 0 44px 64px -20px #0000003f;
+    --radius-xs: 20px;
+    --radius-sm: 24px;
+    --radius-md: 30px;
+    --radius-lg: 32px;
+    --radius-xl: 36px;
+    --radius-2xl: 62px;
+    --radius-3xl: 106px;
+    --space-xs: 8px;
+    --space-sm: 10px;
+    --space-md: 12px;
+    --space-lg: 14px;
+    --space-xl: 16px;
+    --space-2xl: 20px;
+    --space-3xl: 22px;
+    --space-4xl: 30px;
+    --space-5xl: 32px;
+    --space-6xl: 52px;
+  }
+
+  [type="text"],
+
+  input:where(:not([type])),
+
+  [type="email"],
+
+  [type="url"],
+
+  [type="password"],
+
+  [type="number"],
+
+  [type="date"],
+
+  [type="datetime-local"],
+
+  [type="month"],
+
+  [type="search"],
+
+  [type="tel"],
+
+  [type="time"],
+
+  [type="week"],
+
+  [multiple],
+
+  textarea,
+
+  select {
+    appearance: none;
+    background-color: transparent;
+    border-color: unset;
+    border-width: 0;
+    border-radius: unset;
+    padding: unset;
+    font-size: unset;
+    line-height: unset;
+
+  }
+
+  [type="text"]:focus,
+  [type="email"]:focus,
+  [type="url"]:focus,
+  [type="password"]:focus,
+  [type="number"]:focus,
+  [type="date"]:focus,
+  [type="search"]:focus,
+  [multiple]:focus,
+  textarea:focus,
+  select:focus {
+    --tw-ring-color: transparent;
+    border-color: transparent;
+  }
+
+  [type="radio"]:focus,
+  [type="checkbox"]:focus {
+    --tw-ring-color: transparent;
+  }
+
+}
+
+@layer components {
+  .container-xs {
+    @apply w-full mx-auto max-w-[1290px];
+  }
+}
