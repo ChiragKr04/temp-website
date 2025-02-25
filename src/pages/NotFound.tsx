@@ -1,7 +1,7 @@
 const NotFound = () => {
     return (
         <div>
-            <h1>00ps! We ran out of code</h1>
+            <h1>Not Found!</h1>
         </div>
     );
 }
