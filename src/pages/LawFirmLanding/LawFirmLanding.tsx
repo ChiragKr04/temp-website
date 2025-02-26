@@ -15,8 +15,9 @@ const LawFirmLanding = () => {
   const [isScrolling, setIsScrolling] = useState(false);
   const [showDisclaimer, setShowDisclaimer] = useState(false);
 
-  const seoKeywords = "Abhishek Sandilya, Abhishek Sandilya & Associates, Abhishek Sandilya and Associates, Abhishek Sandilya Lawyer, Abhishek Sandilya Lawyer Delhi High Court, Delhi High Court Lawyer, Legal Services Delhi, Lawyer in Delhi, Criminal Lawyer in Delhi, Civil Lawyer in Delhi, Corporate Lawyer in Delhi, Family Lawyer in Delhi, Property Lawyer in Delhi, Tax Lawyer in Delhi, Divorce Lawyer in Delhi, Criminal Lawyer in Delhi, Civil Lawyer in Delhi, Corporate Lawyer in Delhi, Family Lawyer in Delhi, Property Lawyer in Delhi, Tax Lawyer in Delhi, Divorce Lawyer in Delhi";
-  const seoDescription = "Abhishek Sandilya & Associates is a leading law firm in Delhi, headed by Advocate Abhishek Sandilya. Specializing in civil, criminal, and corporate law matters at the Delhi High Court. Expert legal services with a proven track record of success.";
+  const seoKeywords = "Abhishek Sandilya, Advocate Abhishek Sandilya, Abhishek Sandilya Delhi High Court, Abhishek Sandilya & Associates, Best Lawyer in Delhi, Delhi High Court Advocate, Civil Lawyer Delhi, Criminal Lawyer Delhi, Corporate Lawyer Delhi, Abhishek Sandilya Lawyer, Legal Services Delhi NCR";
+
+  const seoDescription = "Advocate Abhishek Sandilya is a distinguished lawyer practicing at the Delhi High Court. As the founder of Abhishek Sandilya & Associates, he provides expert legal services in civil, criminal, and corporate law. Contact Delhi's trusted legal expert for professional legal consultation.";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -93,7 +94,7 @@ const LawFirmLanding = () => {
   return (
     <>
       <SEO
-        title="Abhishek Sandilya & Associates | Leading Law Firm in Delhi"
+        title="Advocate Abhishek Sandilya | Delhi High Court Lawyer | Abhishek Sandilya & Associates"
         description={seoDescription}
         keywords={seoKeywords}
       />
