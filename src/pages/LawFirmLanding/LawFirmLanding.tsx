@@ -6,6 +6,7 @@ import AboutSection from './components/AboutSection';
 import ContactForm from './components/ContactForm';
 import GetInTouch from './components/GetInTouch';
 import Disclaimer from './components/Disclaimer';
+import SEO from '../../components/SEO';
 
 const LawFirmLanding = () => {
 
@@ -13,6 +14,9 @@ const LawFirmLanding = () => {
   const [animatingIcon, setAnimatingIcon] = useState<string | null>(null);
   const [isScrolling, setIsScrolling] = useState(false);
   const [showDisclaimer, setShowDisclaimer] = useState(false);
+
+  const seoKeywords = "Abhishek Sandilya, Abhishek Sandilya & Associates, Abhishek Sandilya and Associates, Abhishek Sandilya Lawyer, Abhishek Sandilya Lawyer Delhi High Court, Delhi High Court Lawyer, Legal Services Delhi, Lawyer in Delhi, Criminal Lawyer in Delhi, Civil Lawyer in Delhi, Corporate Lawyer in Delhi, Family Lawyer in Delhi, Property Lawyer in Delhi, Tax Lawyer in Delhi, Divorce Lawyer in Delhi, Criminal Lawyer in Delhi, Civil Lawyer in Delhi, Corporate Lawyer in Delhi, Family Lawyer in Delhi, Property Lawyer in Delhi, Tax Lawyer in Delhi, Divorce Lawyer in Delhi";
+  const seoDescription = "Abhishek Sandilya & Associates is a leading law firm in Delhi, headed by Advocate Abhishek Sandilya. Specializing in civil, criminal, and corporate law matters at the Delhi High Court. Expert legal services with a proven track record of success.";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -88,6 +92,11 @@ const LawFirmLanding = () => {
 
   return (
     <>
+      <SEO
+        title="Abhishek Sandilya & Associates | Leading Law Firm in Delhi"
+        description={seoDescription}
+        keywords={seoKeywords}
+      />
       {showDisclaimer && (
         <Disclaimer
           onAccept={handleAcceptDisclaimer}
