@@ -9,7 +9,7 @@ export default function AboutSection() {
   return (
     <div id="about" className="py-12 px-16 bg-white relative h-[calc(100vh-80px)]">
       <div className="text-center mb-16 mt-12">
-        <h2 className="text-5xl font-marcellus">MY PRACTICE JOURNEY</h2>
+        <h2 className="text-5xl font-marcellus">MY PRACTICE AREAS</h2>
         <p className="text-[#BF9874] mt-4 font-archivo">KEY CASES & ACHIEVEMENTS</p>
       </div>
       {/* <TimeLine /> */}

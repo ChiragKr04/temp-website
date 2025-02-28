@@ -30,7 +30,7 @@ export default function HomeSection({
         <div className="relative h-full flex items-center z-10">
           <div className="container mx-auto px-8">
             <div className="max-w-2xl">
-              <h2 className="text-xl mb-4 text-white font-archivo">ADVOCATE AT DELHI HIGH COURT</h2>
+              {/* <h2 className="text-xl mb-4 text-white font-archivo">ADVOCATE AT DELHI HIGH COURT</h2> */}
               <h1 className="text-6xl font-light mb-6 text-white font-marcellus">ABHISHEK SANDILYA</h1>
               <p className="mb-8 text-gray-200 max-w-xl font-archivo leading-relaxed">
                 A distinguished litigation lawyer with expertise in civil and criminal laws, practicing across Delhi District Courts, Delhi High Court, and Punjab & Haryana High Court. Known for strategic legal solutions, meticulous case preparation, and powerful courtroom advocacy.
