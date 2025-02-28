@@ -20,13 +20,14 @@ export default function GetInTouch() {
             {/* Google Map */}
             <div className="h-[300px] w-full rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3503.654043486389!2d77.23795524271075!3d28.580149553075874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDM0JzQ5LjEiTiA3N8KwMTQnMTguMiJF!5e0!3m2!1sen!2sin!4v1740491446354!5m2!1sen!2sin"
+                src={`https://www.google.com/maps/embed/v1/place?key=${import.meta.env.VITE_PUBLIC_GOOGLE_MAPS_API_KEY}&q=28.580291,77.238384`}
                 width="600"
                 height="450"
                 style={{ border: 0 }}
                 allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full"
               />
             </div>
 
