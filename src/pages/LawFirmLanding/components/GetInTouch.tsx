@@ -4,7 +4,7 @@ export default function GetInTouch() {
       {/* Footer Section */}
       < footer id="get-in-touch" className="bg-[#0A1229] text-white relative mt-32" >
         {/* Logo Triangle */}
-        <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2" >
+        {/* <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2" >
           <div className="w-32 h-32 bg-white flex items-center justify-center transform rotate-[-45deg]">
             <img
               src="/images/logo.png"
@@ -12,11 +12,11 @@ export default function GetInTouch() {
               className="w-16 h-16 object-contain rotate-45 mt-8 mr-8"
             />
           </div>
-        </div >
+        </div > */}
 
         {/* Footer Content */}
-        <div className="container mx-auto px-16 py-16" >
-          <div className="grid grid-cols-2 gap-8 mt-24">
+        <div className="container mx-auto px-4 sm:px-16 py-16" >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-24">
             {/* Google Map */}
             <div className="h-[300px] w-full rounded-lg overflow-hidden">
               <iframe
@@ -30,11 +30,10 @@ export default function GetInTouch() {
               />
             </div>
 
-            {/* Main Office */}
-            <div className="flex items-center justify-end">
-              {/* make this section to align in middle of map box */}
-              <div className="font-archivo text-right">
-                <h3 className="text-xl font-marcellus mb-6 text-right">Delhi Main Office</h3>
+            {/* Main Office - Modified alignment for mobile */}
+            <div className="flex items-center md:justify-end justify-center">
+              <div className="font-archivo text-center md:text-right">
+                <h3 className="text-xl font-marcellus mb-6 text-center md:text-right">Delhi Main Office</h3>
                 <div className="space-y-2 text-gray-400">
                   <p>M: +91 991 014 3073</p>
                   <p>T: +91 782 728 8178</p>

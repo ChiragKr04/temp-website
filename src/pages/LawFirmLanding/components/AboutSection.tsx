@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { motion } from 'framer-motion';
-
 interface PracticeArea {
   id: number;
   title: string;
@@ -11,7 +8,7 @@ interface PracticeArea {
 export default function AboutSection() {
   return (
     <div id="about" className="py-12 px-16 bg-white relative h-[calc(100vh-80px)]">
-      <div className="text-center mb-16">
+      <div className="text-center mb-16 mt-12">
         <h2 className="text-5xl font-marcellus">MY PRACTICE JOURNEY</h2>
         <p className="text-[#BF9874] mt-4 font-archivo">KEY CASES & ACHIEVEMENTS</p>
       </div>
@@ -26,83 +23,56 @@ const PracticeAreaSlider = () => {
     {
       id: 1,
       title: 'Criminal Law',
-      description: "Specialized in Section 138 NI Act cases, achieving favorable outcomes in Tis Hazari and Rohini Courts.",
-      image: '/images/practice-areas/criminal-law.jpg'
+      description: "Extensive experience in criminal litigation, specializing in Section 138 NI Act cases, financial fraud, and contractual disputes. Proven track record of successful representations at Tis Hazari and Rohini Courts with strategic defense approaches.",
+      image: '/images/criminal-law.jpg'
     },
     {
       id: 2,
       title: 'Civil Law',
-      description: "Successfully handled complex family property partition suits at Patiala House Court.",
-      image: '/images/practice-areas/civil-law.jpg'
+      description: "Comprehensive expertise in civil litigation, including property disputes, partition suits, and municipal law matters. Successfully challenged government bodies like NDMC and handled complex family property matters at Patiala House Court.",
+      image: '/images/civil-law.jpg'
     },
     {
       id: 3,
       title: 'Matrimonial Law',
-      description: 'Sensitive handling of matrimonial matters including divorce, maintenance, child custody, and domestic violence cases. We ensure your rights are protected while maintaining confidentiality.',
-      image: '/images/practice-areas/matrimonial-law.jpg'
+      description: 'Specialized experience in family law matters including contested divorces, maintenance claims, and custody battles. Providing empathetic yet strategic representation in domestic violence cases while ensuring client confidentiality and protecting legal rights.',
+      image: '/images/matrimonial-law.jpg'
     },
     {
       id: 4,
-      title: 'Intellectual Property',
-      description: 'Protection and enforcement of IP rights including patents, trademarks, copyrights, and trade secrets. We help secure and defend your intellectual assets through registration and litigation.',
-      image: '/images/practice-areas/ip-law.jpg'
+      title: 'Service Law',
+      description: 'Expert representation in service law matters before the Central Administrative Tribunal (CAT), Delhi. Successfully handled cases challenging wrongful rejection of candidature and other service-related disputes with government departments.',
+      image: '/images/ip-law.jpg'
     },
     {
       id: 5,
-      title: 'Tax Law',
-      description: 'Expert guidance in direct and indirect tax matters, including GST, income tax appeals, and tax planning. We help navigate complex tax regulations and represent clients before tax authorities.',
-      image: '/images/practice-areas/tax-law.jpg'
+      title: 'Municipal Law',
+      description: 'Proven expertise in municipal law disputes, including successful litigation against municipal bodies. Notable victory in premises de-sealing case against NDMC, establishing important precedents in municipal law interpretation.',
+      image: '/images/tax-law.jpg'
     },
     {
       id: 6,
-      title: 'Insolvency & Bankruptcy',
-      description: 'Specialized assistance in corporate insolvency resolution, bankruptcy proceedings, and debt restructuring under the IBC. We represent both creditors and debtors in insolvency matters.',
-      image: '/images/practice-areas/bankruptcy-law.jpg'
+      title: 'Property Law',
+      description: 'Specialized in resolving complex property disputes, including family partition suits and real estate litigation. Extensive experience in property documentation, title verification, and representing clients in property-related matters across Delhi courts.',
+      image: '/images/bankruptcy-law.jpg'
     }
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const cardsToShow = 4;
-
-  const nextSlide = () => {
-    if (currentIndex + cardsToShow < practiceAreas.length) {
-      setCurrentIndex(currentIndex + 1);
-    }
-  };
-
-  const prevSlide = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
-
-  const isAtStart = currentIndex === 0;
-  const isAtEnd = currentIndex + cardsToShow >= practiceAreas.length;
-
   return (
     <div>
-      <div className="relative max-w-[1400px] mx-auto px-16">
-        <div className="overflow-hidden -mx-4">
-          <motion.div
-            className="flex gap-6 px-4"
-            animate={{
-              x: `-${currentIndex * (288)}px`
-            }}
-            transition={{
-              duration: 0.5,
-              ease: "easeInOut"
-            }}
-          >
+      <div className="relative max-w-[1400px] mx-auto px-0">
+        <div className="overflow-x-auto hide-scrollbar">
+          <div className="flex gap-6 px-4">
             {practiceAreas.map((area, index) => (
               <div
                 key={area.id}
-                className={`relative w-72 h-96 group cursor-pointer flex-shrink-0 ${index === practiceAreas.length - 1 ? 'mr-16' : ''
+                className={`relative w-72 h-96 group flex-shrink-0 ${index === practiceAreas.length - 1 ? 'mr-16' : ''
                   }`}
               >
                 <div
                   className="absolute inset-0 rounded-lg overflow-hidden"
                   style={{
-                    backgroundImage: `linear-gradient(to bottom, rgba(10, 36, 114, 0.7), rgba(10, 36, 114, 0.9)), url(${area.image})`,
+                    backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url(${area.image})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                   }}
@@ -112,44 +82,14 @@ const PracticeAreaSlider = () => {
                       {area.title}
                     </h3>
 
-                    <p className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p className="text-white">
                       {area.description}
                     </p>
                   </div>
                 </div>
               </div>
             ))}
-          </motion.div>
-        </div>
-
-        <div className="flex justify-end gap-4 mt-8">
-          <button
-            onClick={prevSlide}
-            disabled={isAtStart}
-            className={`w-10 h-10 rounded-full border-2 flex items-center justify-center transition-colors
-                ${isAtStart
-                ? 'border-gray-300 text-gray-300 cursor-not-allowed'
-                : 'border-[#BF9874] text-[#BF9874] hover:bg-[#BF9874] hover:text-white cursor-pointer'
-              }`}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-
-          <button
-            onClick={nextSlide}
-            disabled={isAtEnd}
-            className={`w-10 h-10 rounded-full border-2 flex items-center justify-center transition-colors
-                ${isAtEnd
-                ? 'border-gray-300 text-gray-300 cursor-not-allowed'
-                : 'border-[#BF9874] text-[#BF9874] hover:bg-[#BF9874] hover:text-white cursor-pointer'
-              }`}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+          </div>
         </div>
       </div>
     </div>

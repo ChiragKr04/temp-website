@@ -11,20 +11,20 @@ export default function HomeSection({
         {/* Full Background Image */}
         <div className="absolute inset-0">
           <img
-            src="/images/court2.jpg"
+            src="/images/court5.jpg"
             alt="Background"
             className="h-full w-full object-cover opacity-20"
           />
         </div>
 
         {/* Background Image Container */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-[80%] mr-24 z-10">
+        {/* <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-[100%] mr-24 z-10">
           <img
-            src="/images/lawyer4.png"
+            src="/images/law-lady-2.png"
             alt="Legal Professional"
             className="h-full w-full object-contain object-right"
           />
-        </div>
+        </div> */}
 
         {/* Content */}
         <div className="relative h-full flex items-center z-10">

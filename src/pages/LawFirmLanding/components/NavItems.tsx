@@ -11,28 +11,24 @@ export default function NavItems({
 }) {
 
   return (
-    <div>
+    <div className="border-b border-[#BF9874]">
       {/* Navigation */}
-      <div className="flex items-center justify-between px-8 py-4 h-[80px]">
-        <nav className="flex items-center space-x-8">
+      <div className="flex flex-col md:flex-row items-center md:items-center justify-between px-8 py-4 h-auto md:h-[80px]">
+        <nav className="flex flex-col md:flex-row items-center md:items-center space-y-4 md:space-y-0 md:space-x-8 w-full md:w-auto">
           <a
             href="#home"
-            className={`flex items-center transition-colors ${navigationState === 'home' ? 'text-[#BF9874]' : 'text-gray-800'
-              }`}
+            className={`flex items-center transition-colors ${navigationState === 'home' ? 'text-[#BF9874]' : 'text-gray-800'}`}
             onClick={(e) => smoothScrollFunc(e, 'home')}>
-            <span className={`text-[#BF9874] mr-2 transition-transform ${animatingIcon === 'home' ? 'animate-spin-once' : ''
-              }`}>
+            <span className={`text-[#BF9874] mr-2 transition-transform ${animatingIcon === 'home' ? 'animate-spin-once' : ''}`}>
               <Diamond size={16} fill={`${navigationState === 'home' ? 'currentColor' : 'text-gray-800'}`} strokeWidth={0} />
             </span>
             HOME
           </a>
           <a
             href="#about"
-            className={`flex items-center transition-colors ${navigationState === 'about' ? 'text-[#BF9874]' : 'text-gray-800'
-              }`}
+            className={`flex items-center transition-colors ${navigationState === 'about' ? 'text-[#BF9874]' : 'text-gray-800'}`}
             onClick={(e) => smoothScrollFunc(e, 'about')}>
-            <span className={`text-[#BF9874] mr-2 transition-transform ${animatingIcon === 'about' ? 'animate-spin-once' : ''
-              }`}>
+            <span className={`text-[#BF9874] mr-2 transition-transform ${animatingIcon === 'about' ? 'animate-spin-once' : ''}`}>
               <Diamond size={16} fill={`${navigationState === 'about' ? 'currentColor' : 'text-gray-800'}`} strokeWidth={0} />
             </span>
             ABOUT
@@ -50,8 +46,7 @@ export default function NavItems({
           </a> */}
           <a
             href="#contact"
-            className={`flex items-center transition-colors ${navigationState === 'contact' ? 'text-[#BF9874]' : 'text-gray-800'
-              }`}
+            className={`flex items-center transition-colors ${navigationState === 'contact' ? 'text-[#BF9874]' : 'text-gray-800'}`}
             onClick={(e) => smoothScrollFunc(e, 'contact')}>
             <span className={`text-[#BF9874] mr-2 transition-transform ${animatingIcon === 'contact' ? 'animate-spin-once' : ''}`}>
               <Diamond size={16} fill={`${navigationState === 'contact' ? 'currentColor' : 'text-gray-800'}`} strokeWidth={0} />
@@ -60,8 +55,7 @@ export default function NavItems({
           </a>
           <a
             href="#contact"
-            className={`flex items-center transition-colors ${navigationState === 'get-in-touch' ? 'text-[#BF9874]' : 'text-gray-800'
-              }`}
+            className={`flex items-center transition-colors ${navigationState === 'get-in-touch' ? 'text-[#BF9874]' : 'text-gray-800'}`}
             onClick={(e) => smoothScrollFunc(e, 'get-in-touch')}>
             <span className={`text-[#BF9874] mr-2 transition-transform ${animatingIcon === 'get-in-touch' ? 'animate-spin-once' : ''}`}>
               <Diamond size={16} fill={`${navigationState === 'get-in-touch' ? 'currentColor' : 'text-gray-800'}`} strokeWidth={0} />
@@ -70,7 +64,7 @@ export default function NavItems({
           </a>
         </nav>
 
-        <button className="px-6 py-2 border border-gray-800 text-gray-800 hover:bg-[#BF9874] hover:border-[#BF9874] hover:text-white transition-colors"
+        <button className="self-center md:self-auto mt-4 md:mt-0 px-6 py-2 border border-gray-800 text-gray-800 hover:bg-[#BF9874] hover:border-[#BF9874] hover:text-white transition-colors"
           onClick={() => {
             // go to contact page
             smoothScrollFunc(null, 'contact');

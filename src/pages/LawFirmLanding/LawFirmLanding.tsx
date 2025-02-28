@@ -8,6 +8,30 @@ import GetInTouch from './components/GetInTouch';
 import Disclaimer from './components/Disclaimer';
 import SEO from '../../components/SEO';
 
+const styles = {
+  container: {
+    width: '100%',
+    maxWidth: '1200px',
+    margin: '0 auto',
+    padding: '0 15px',
+  },
+  section: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '20px',
+    '@media (max-width: 768px)': {
+      padding: '40px 0',
+    },
+  },
+  grid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+    gap: '20px',
+    width: '100%',
+  },
+  // Add any other responsive styles specific to your components
+}
+
 const LawFirmLanding = () => {
 
   const [navigationState, setNavigationState] = useState<"home" | "about" | "career" | "contact" | "get-in-touch">("home");
@@ -23,7 +47,7 @@ const LawFirmLanding = () => {
     const handleScroll = () => {
       if (isScrolling) return;
 
-      const scrollPosition = window.scrollY + 230;
+      const scrollPosition = window.scrollY + (window.innerWidth < 768 ? 330 : 230);
       const sections = ['home', 'about', 'career', 'contact', 'get-in-touch'];
 
       for (const section of sections) {
@@ -62,7 +86,7 @@ const LawFirmLanding = () => {
     if (id !== navigationState) {
       const startElement = document.documentElement.scrollTop;
       const targetElement = document.getElementById(id);
-      const addExtra = -80;
+      const addExtra = window.innerWidth < 768 ? -300 : -80;
       const targetPosition = (targetElement?.offsetTop ?? 0) + addExtra || 0;
       const distance = Math.abs(targetPosition - startElement);
       const duration = Math.min(Math.max(distance / 2, 500), 800);
@@ -94,7 +118,7 @@ const LawFirmLanding = () => {
   return (
     <>
       <SEO
-        title="Advocate Abhishek Sandilya | Delhi High Court Lawyer | Abhishek Sandilya & Associates"
+        title="Abhishek Sandilya Advocate | Delhi High Court Lawyer | Abhishek Sandilya & Associates"
         description={seoDescription}
         keywords={seoKeywords}
       />
@@ -105,18 +129,16 @@ const LawFirmLanding = () => {
         />
       )}
       <div className={`min-h-screen bg-white scroll-pt-[80px] scroll-smooth ${showDisclaimer ? 'blur-xl' : ''}`}>
-        <header className="bg-white flex sticky top-0 z-50 border-b border-[#BF9874]">
+        <header className="bg-white flex flex-col md:flex-row sticky top-0 z-50">
           <Logo />
 
           {/* Right Content Section */}
           <div className="w-full">
-            {/* <TopHourLinksBar /> */}
             <NavItems
               navigationState={navigationState}
               smoothScrollFunc={smoothScrollFunc}
               animatingIcon={animatingIcon}
             />
-
           </div>
         </header>
 
